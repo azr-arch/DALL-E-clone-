@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+.header {
+  height: 100px;
+
+  padding:1.5rem 2rem;
+}
+
+.header > form {
+  display: flex;
+  justify-content: center;
+}
+
+.form-style-container {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  width: 70%;
+
+  display: flex;
+  align-items: center;
+  border-radius: .5em;
+
+  overflow: hidden;
+}
+
+.search-field{
+  padding: .8em 1em;
+  
+  flex: 1;
+
+  border: none;
+  outline: none;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1em;
+}
+
+.search-field::placeholder {
+  color: #bbb;
+}
+
+.submit-btn-container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  
+  flex: 0.1;
+  overflow: hidden;
+
+  padding: .5em 1em;
+
+
+  transition: background 100ms ease-in;
+}
+
+.submit-btn{
+  font-family: 'Nunito', sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  letter-spacing: .5px;
+
+  background: transparent;
+
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  transition: color 200ms ease-in-out;
+}
+
+.submit-btn-container.active {
+  background-color: black;
+}
+.active > button {
+  color: white;
+}
+
+.image-container {
+  height: calc(100vh - 100px);
+  padding: 2em;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  gap: .5em;
+}
+
+.image-container > img {
+  width: 100%;
+
+}
+
+.quote-card {
+  height: calc(50vh - 100px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation: fade-in 500ms ease-in;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+.quote {
+  width: 80%;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+.quote-text {
+  font-weight: 300;
+  font-style: italic;
+}
+.quote-author {
+  font-weight: 400;
+}
