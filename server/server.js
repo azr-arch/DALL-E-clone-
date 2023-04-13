@@ -22,7 +22,7 @@ app.get('/', async ( req, res ) => (
 app.post('/', async (req, res) => {
     try {
         const { message } = req.body
-        console.log(message)
+//         console.log(message)
         res.status(200).send(message)
         const response = await openai.createImage({
             prompt: message,
