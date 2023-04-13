@@ -23,12 +23,12 @@ app.post('/', async (req, res) => {
     try {
         const { message } = req.body
         console.log(message)
-        res.status(200).send(message)
         const response = await openai.createImage({
             prompt: message,
             n: 4,
             size: "1024x1024",
         });
+        // res.status(200).send(message)
         console.log(response.data)
         res.json({
             // data: response.data.data[0]
